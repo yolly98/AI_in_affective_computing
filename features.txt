@@ -1,0 +1,7 @@
+GSRmedian, GSRmax, GSRrms, GSRmean PPGmedian, PPGmin, PPGmax, EEG1median, EEG1obw, EEG1betaMedian, EEG2alphaMean, EEG3median, EEG4median, EEG4thetaMin, EMGmedian, EMGmax, EMGmin, EMGtrimmean, EMGmean, EMGrms, EMGmedian, Emotion
+
+// Per eseguire il modello
+load('trainedModels/trainedModel.mat');
+Y = trainedModel.predictFcn(X);
+figure;
+plotconfusion(categorical(table2array(T)), Y);
